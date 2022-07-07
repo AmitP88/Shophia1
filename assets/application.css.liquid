@@ -1,2 +1,137 @@
-// Put your styles in this file.
-// Note: "@import" rules aren’t supported.
+/* ============= CSS Reset ======================== */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* ================================================ */
+
+.top__header {
+  background-color: pink;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 6rem;
+}
+
+.top__header-phone {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.top__header > .top__header-phone > p {
+  margin: 0;
+}
+
+hr {
+  height: 2.25rem;
+  background-color: salmon;
+  margin: 0;
+  border: none;
+}
+
+.top__header-customer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.top__header > .top__header-customer > p {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.top__header > .top__header-customer > span, .phone__number {
+  padding: 0 1.25rem;
+}
+
+.bottom__header > .bottom__header-top {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.20rem 6rem;
+  background-color: red;
+}
+
+.bottom__header > .bottom__header-top > .bottom__header-navigation > a {
+  text-decoration: none;
+  color: black;
+}
+
+.bottom__header > .bottom__header-top > .bottom__header-social {
+  display: flex;
+  align-items: center;
+}
+
+.bottom__header > .bottom__header-top > .bottom__header-social > .social__buttons {
+  display: flex;
+  padding-right: 2rem;
+}
+
+.bottom__header > .bottom__header-top > .bottom__header-social > .social__buttons > .social__buttons-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+  width: 30px;
+  height: 30px;
+  color: blue;
+  border: blue solid 2px;
+  border-radius: 50%;
+}
+
+.bottom__header > .bottom__header-bottom {
+  display: flex;
+  justify-content: center;
+  padding: 0 6rem;
+}
+
+.bottom__header > .bottom__header-bottom > .bottom__header-shape {
+  width: 33%;
+  height: 50px;
+  background-color: red;
+  clip-path: polygon(0 0, 50% 100%, 100% 0);
+}

@@ -12,30 +12,61 @@
   {{ 'application.js' | asset_url | script_tag }}
 </head>
 <body>
+  <header>
+    <div class="desktop__header">
+      <div class="top__header">
+        <div class="top__header-phone">
+          <img src="#" class="phone__icon">
+          <p class="phone__number">Call +001 555 801</p>
+        </div>
 
-  {% for link in linklists.main-menu.links %}
-    {% assign child_list_handle = link.title | handleize %}
-    {% if linklists[child_list_handle].links != blank %}
-      <a href="{{ link.url }}">{{ link.title }}</a>
-      [{% for childlink in linklists[child_list_handle].links %}
-        <a href="{{ childlink.url }}">{{ childlink.title | escape }}</a>
-      {% endfor %}]
-    {% else %}
-      <a href="{{ link.url }}">{{ link.title }}</a>
-    {% endif %}
-  {% endfor %}
+        <div class="top__header-customer">
+          <p class="customer__welcome">Welcome MSG!</p>
+          <span> | </span>
+          <p class="customer__account">My Account</p>
+          <span> | </span>
+          <p class="customer__wishlist">My Wishlist</p>
+          <span> | </span>
+          <p class="customer__login">Login</p>
+        </div>
+      </div>
 
-  <a href="/cart">cart</a>
+      <hr>
 
-  {% if shop.customer_accounts_enabled %}
-    {% if customer %}
-      <a href="/account">account</a>
-      {{ 'log out'  | customer_logout_link }}
-    {% else %}
-      {{ 'log in ' | customer_login_link }}
-      {{ 'register' | customer_register_link }}
-    {% endif %}
-  {% endif %}
+      <div class="bottom__header">
+        <div class="bottom__header-top">
+          <div class="bottom__header-navigation">
+            {% for link in linklists.main-menu.links %}
+              {% assign child_list_handle = link.title | handleize %}
+              {% if linklists[child_list_handle].links != blank %}
+                <a href="{{ link.url }}">{{ link.title }}</a>
+                [{% for childlink in linklists[child_list_handle].links %}
+                  <a href="{{ childlink.url }}">{{ childlink.title | escape }}</a>
+                {% endfor %}]
+              {% else %}
+                <a href="{{ link.url }}">{{ link.title }}</a>
+              {% endif %}
+            {% endfor %}
+          </div>
+          <div class="bottom__header-title">
+            <img src="#" />
+          </div>
+          <div class="bottom__header-social">
+            <div class="social__buttons">
+              <div class="social__buttons-button">f</div>
+              <div class="social__buttons-button">t</div>
+              <div class="social__buttons-button">p</div>
+              <div class="social__buttons-button">i</div>
+            </div>
+            <div class="social__currency">currency</div>
+          </div>
+        </div>
+        <div class="bottom__header-bottom">
+          <div class="bottom__header-shape"></div>
+        </div>
+      </div>      
+    </div>
+  </header>
 
   <main role="main">
     {{ content_for_layout }}
