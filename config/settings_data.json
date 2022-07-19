@@ -1,6 +1,25 @@
 {
-  "current": "Default",
+  "current": {
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "phone_icon": "shopify:\/\/shop_images\/phone_icon_f354aeb9-8190-4f33-8907-1cc9c380ee61.png",
+          "phone_number": "+001 555 801",
+          "welcome_message": "Welcome MSG!",
+          "my_account": "My Account",
+          "my_wishlist": "My Wishlist",
+          "login": "Login",
+          "logo": "shopify:\/\/shop_images\/Shophia_logo.png"
+        }
+      }
+    },
+    "content_for_index": [
+
+    ]
+  },
   "presets": {
-    "Default": { }
+    "Default": {
+    }
   }
 }
