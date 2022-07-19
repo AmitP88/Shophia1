@@ -70,3 +70,33 @@
   <span class="dot" onclick="currentSlide(3)"></span>
   <span class="dot" onclick="currentSlide(4)"></span>
 </div>
+
+{% schema %}
+  {
+    "name": "Slideshow",
+    "tag": "section",
+    "class": "slideshow",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "slide_image_1",
+        "label": "Slide Image 1"
+      },
+      {
+        "type": "image_picker",
+        "id": "slide_image_2",
+        "label": "Slide Image 2"
+      },
+      {
+        "type": "image_picker",
+        "id": "slide_image_3",
+        "label": "Slide Image 3"
+      },
+      {
+        "type": "image_picker",
+        "id": "slide_image_4",
+        "label": "Slide Image 4"
+      }
+    ]
+  }
+{% endschema %}
