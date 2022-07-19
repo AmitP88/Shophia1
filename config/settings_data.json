@@ -12,6 +12,12 @@
           "login": "Login",
           "logo": "shopify:\/\/shop_images\/Shophia_logo.png"
         }
+      },
+      "slideshow": {
+        "type": "slideshow",
+        "settings": {
+          "slide_image_1": "shopify:\/\/shop_images\/slide_2.png"
+        }
       }
     },
     "content_for_index": [
