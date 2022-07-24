@@ -1,0 +1,84 @@
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <img src="{{ section.settings.slide_image_1 | img_url: 'master' }}" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="{{ section.settings.slide_image_2 | img_url: 'master' }}" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="{{ section.settings.slide_image_3 | img_url: 'master' }}" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="{{ section.settings.slide_image_4 | img_url: 'master' }}" style="width:100%">
+  </div>
+
+  <!-- The dots/circles -->
+  <div style="text-align:center;margin-top: -50px;position: absolute;left: 46%;">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+  </div>
+</div>
+
+<script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
+
+  // Thumbnail image controls
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+  }
+</script>
+
+{% schema %}
+  {
+    "name": "Slideshow",
+    "tag": "section",
+    "class": "slideshow",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "slide_image_1",
+        "label": "Slide Image 1"
+      },
+      {
+        "type": "image_picker",
+        "id": "slide_image_2",
+        "label": "Slide Image 2"
+      },
+      {
+        "type": "image_picker",
+        "id": "slide_image_3",
+        "label": "Slide Image 3"
+      },
+      {
+        "type": "image_picker",
+        "id": "slide_image_4",
+        "label": "Slide Image 4"
+      }
+    ]
+  }
+{% endschema %}
