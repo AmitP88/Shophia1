@@ -6,35 +6,63 @@
     <img src="{{ section.settings.slide_1_image | img_url: 'master' }}" style="width:100%">
     <div class="transparent-overlay"></div>
     <div class="mySlides__overlay-content">
-      <div class="overlay-content__promo"></div>
-      <button></button>
+      <div class="overlay-content__promo">
+        <p class="text-1">{{ section.settings.slide_1_text_1 }}</p>
+        <p class="text-2">{{ section.settings.slide_1_text_2 }}</p>
+        <p class="text-3">{{ section.settings.slide_1_text_3 }}</p>
+        <p class="text-4">{{ section.settings.slide_1_text_4 }}</p>
+      </div>
+      <a href="{{ section.settings.slide_1_button_url }}">
+        <button>{{ section.settings.slide_1_button_text }}</button>        
+      </a>
     </div>
   </div>
 
   <div class="mySlides fade">
     <img src="{{ section.settings.slide_2_image | img_url: 'master' }}" style="width:100%">
     <div class="transparent-overlay"></div>
-    <div class="mySlides__textcontent">
-      <div class="overlay-content__promo"></div>
-      <button></button>
+    <div class="mySlides__overlay-content">
+      <div class="overlay-content__promo">
+        <p class="text-1">{{ section.settings.slide_2_text_1 }}</p>
+        <p class="text-2">{{ section.settings.slide_2_text_2 }}</p>
+        <p class="text-3">{{ section.settings.slide_2_text_3 }}</p>
+        <p class="text-4">{{ section.settings.slide_2_text_4 }}</p>
+      </div>
+      <a href="{{ section.settings.slide_2_button_url }}">
+        <button>{{ section.settings.slide_2_button_text }}</button>        
+      </a>
     </div>
   </div>
 
   <div class="mySlides fade">
     <img src="{{ section.settings.slide_3_image | img_url: 'master' }}" style="width:100%">
     <div class="transparent-overlay"></div>
-    <div class="mySlides__textcontent">
-      <div class="overlay-content__promo"></div>
-      <button></button>
+    <div class="mySlides__overlay-content">
+      <div class="overlay-content__promo">
+        <p class="text-1">{{ section.settings.slide_3_text_1 }}</p>
+        <p class="text-2">{{ section.settings.slide_3_text_2 }}</p>
+        <p class="text-3">{{ section.settings.slide_3_text_3 }}</p>
+        <p class="text-4">{{ section.settings.slide_3_text_4 }}</p>
+      </div>
+      <a href="{{ section.settings.slide_3_button_url }}">
+        <button>{{ section.settings.slide_3_button_text }}</button>        
+      </a>
     </div>
   </div>
 
   <div class="mySlides fade">
     <img src="{{ section.settings.slide_4_image | img_url: 'master' }}" style="width:100%">
     <div class="transparent-overlay"></div>
-    <div class="mySlides__textcontent">
-      <div class="overlay-content__promo"></div>
-      <button></button>
+    <div class="mySlides__overlay-content">
+      <div class="overlay-content__promo">
+        <p class="text-1">{{ section.settings.slide_4_text_1 }}</p>
+        <p class="text-2">{{ section.settings.slide_4_text_2 }}</p>
+        <p class="text-3">{{ section.settings.slide_4_text_3 }}</p>
+        <p class="text-4">{{ section.settings.slide_4_text_4 }}</p>
+      </div>
+      <a href="{{ section.settings.slide_4_button_url }}">
+        <button>{{ section.settings.slide_4_button_text }}</button>        
+      </a>
     </div>
   </div>
 
@@ -85,9 +113,79 @@
         "label": "Slide 1 Image"
       },
       {
+        "type": "text",
+        "id": "slide_1_text_1",
+        "label": "Slide 1 Text 1",
+        "default": "Mid-Season"
+      },
+      {
+        "type": "text",
+        "id": "slide_1_text_2",
+        "label": "Slide 1 Text 2",
+        "default": "Sale"
+      },
+      {
+        "type": "text",
+        "id": "slide_1_text_3",
+        "label": "Slide 1 Text 3",
+        "default": "Up To"
+      },
+      {
+        "type": "text",
+        "id": "slide_1_text_4",
+        "label": "Slide 1 Text 4",
+        "default": "50% OFF"
+      },
+      {
+        "type": "url",
+        "id": "slide_1_button_url",
+        "label": "Slide 1 Button URL"
+      },
+      {
+        "type": "text",
+        "id": "slide_1_button_text",
+        "label": "Slide 1 Button Text",
+        "default": "Shop Now"
+      },
+      {
         "type": "image_picker",
         "id": "slide_2_image",
         "label": "Slide 2 Image"
+      },
+      {
+        "type": "text",
+        "id": "slide_2_text_1",
+        "label": "Slide 2 Text 1",
+        "default": "Mid-Season"
+      },
+      {
+        "type": "text",
+        "id": "slide_2_text_2",
+        "label": "Slide 2 Text 2",
+        "default": "Sale"
+      },
+      {
+        "type": "text",
+        "id": "slide_2_text_3",
+        "label": "Slide 2 Text 3",
+        "default": "Up To"
+      },
+      {
+        "type": "text",
+        "id": "slide_2_text_4",
+        "label": "Slide 2 Text 4",
+        "default": "50% OFF"
+      },
+      {
+        "type": "url",
+        "id": "slide_2_button_url",
+        "label": "Slide 2 Button URL"
+      },
+      {
+        "type": "text",
+        "id": "slide_2_button_text",
+        "label": "Slide 2 Button Text",
+        "default": "Shop Now"
       },
       {
         "type": "image_picker",
@@ -95,9 +193,79 @@
         "label": "Slide 3 Image"
       },
       {
+        "type": "text",
+        "id": "slide_3_text_1",
+        "label": "Slide 3 Text 1",
+        "default": "Mid-Season"
+      },
+      {
+        "type": "text",
+        "id": "slide_3_text_2",
+        "label": "Slide 3 Text 2",
+        "default": "Sale"
+      },
+      {
+        "type": "text",
+        "id": "slide_3_text_3",
+        "label": "Slide 3 Text 3",
+        "default": "Up To"
+      },
+      {
+        "type": "text",
+        "id": "slide_3_text_4",
+        "label": "Slide 3 Text 4",
+        "default": "50% OFF"
+      },
+      {
+        "type": "url",
+        "id": "slide_3_button_url",
+        "label": "Slide 3 Button URL"
+      },
+      {
+        "type": "text",
+        "id": "slide_3_button_text",
+        "label": "Slide 3 Button Text",
+        "default": "Shop Now"
+      },
+      {
         "type": "image_picker",
         "id": "slide_4_image",
         "label": "Slide 4 Image"
+      },
+      {
+        "type": "text",
+        "id": "slide_4_text_1",
+        "label": "Slide 4 Text 1",
+        "default": "Mid-Season"
+      },
+      {
+        "type": "text",
+        "id": "slide_4_text_2",
+        "label": "Slide 4 Text 2",
+        "default": "Sale"
+      },
+      {
+        "type": "text",
+        "id": "slide_4_text_3",
+        "label": "Slide 4 Text 3",
+        "default": "Up To"
+      },
+      {
+        "type": "text",
+        "id": "slide_4_text_4",
+        "label": "Slide 4 Text 4",
+        "default": "50% OFF"
+      },
+      {
+        "type": "url",
+        "id": "slide_4_button_url",
+        "label": "Slide 4 Button URL"
+      },
+      {
+        "type": "text",
+        "id": "slide_4_button_text",
+        "label": "Slide 4 Button Text",
+        "default": "Shop Now"
       }
     ]
   }
