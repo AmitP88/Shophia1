@@ -393,4 +393,33 @@ hr {
   .desktop__header {
     display: initial;
   }
+
+  .bottom__header > .bottom__header-top > .bottom__header-title > img {
+    width: 10rem;
+  }
+
+  .bottom__header > .bottom__header-top > .bottom__header-title {
+    margin-right: 0;
+  }
+
+  .bottom__header > .bottom__header-top > .bottom__header-navigation > a {
+    font-size: 1rem;
+  }
+
+}
+
+@media only screen and (min-width: 1200px) {
+  .bottom__header > .bottom__header-top > .bottom__header-title > img {
+    width: auto;
+  }
+
+  .bottom__header > .bottom__header-top > .bottom__header-navigation > a {
+    font-size: 1.25rem;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .bottom__header > .bottom__header-top > .bottom__header-title {
+    margin-right: 5%;
+  }
 }
