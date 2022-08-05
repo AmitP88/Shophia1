@@ -498,12 +498,16 @@ hr {
   .services__banner {
     display: flex;
     justify-content: center;
-    padding: 2rem 6rem;
+    padding: 2rem 1rem;
   }
 
-  .services__banner-service {
+  .services__banner > .services__banner-service {
     width: 33.33%;
     margin: 0;
+  }
+
+  .services__banner > .services__banner-service > .service__text > h2 {
+    font-size: 1.20rem;
   }
 
   #service_1 {
@@ -632,6 +636,21 @@ hr {
   .mySlides > img {
     height: 60vh;
   }
+
+  /* ============================== Services Banner ================================== */
+
+  .services__banner {
+    padding: 2rem 6rem;
+  }
+
+  .services__banner > .services__banner-service {
+    padding: 0.5rem;
+  }
+
+  .services__banner > .services__banner-service > .service__text > h2 {
+    font-size: 1.3rem;
+  }
+
 }
 
 @media only screen and (min-width: 1200px) {
