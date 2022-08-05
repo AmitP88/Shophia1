@@ -403,6 +403,7 @@ hr {
   padding: 0.25rem 0;
   margin: 1rem auto;
   width: 75%;
+  padding-left: 1rem;
 }
 
 .services__banner-service > .service__icon {
@@ -443,6 +444,12 @@ hr {
   display: none;
 }
 
+@media only screen and (min-width: 375px) {
+  .services__banner-service {
+    padding-left: 2rem;
+  }
+}
+
 /* Tablet */
 @media only screen and (min-width: 600px) {
   .mySlides > img {
@@ -466,6 +473,39 @@ hr {
   .transparent-overlay {
     height: 99.4%;
   }
+
+
+  /* ============================== Services Banner ================================== */
+  .services__banner {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 6rem;
+  }
+
+  .services__banner-service {
+    width: 33.33%;
+    margin: 0;
+  }
+
+  #service_1 {
+    clip-path: polygon(90% 0, 100% 50%, 90% 100%, 0 100%, 0 0);
+  }
+
+  #service_2 {
+    clip-path: polygon(0 0,100% 0,90% 50%,100% 100%,0 100%,10% 50%);
+    margin: 0 -0.5rem;
+    justify-content: center;
+    padding-right: 1rem;
+  }
+
+  #service_3 {
+    clip-path: polygon(0 50%, 10% 0, 100% 0, 100% 100%, 10% 100%);
+  }
+
+  #service_3 > .service__icon {
+    padding-left: 2.5rem;
+  }
+
 
 }
 
@@ -572,37 +612,6 @@ hr {
 
   .mySlides > img {
     height: 60vh;
-  }
-
-  /* ============================== Services Banner ================================== */
-  .services__banner {
-    display: flex;
-    justify-content: center;
-    padding: 2rem 6rem;
-  }
-
-  .services__banner-service {
-    width: 33.33%;
-    margin: 0;
-  }
-
-  #service_1 {
-    clip-path: polygon(90% 0, 100% 50%, 90% 100%, 0 100%, 0 0);
-  }
-
-  #service_2 {
-    clip-path: polygon(0 0,100% 0,90% 50%,100% 100%,0 100%,10% 50%);
-    margin: 0 -0.5rem;
-    justify-content: center;
-    padding-right: 1rem;
-  }
-
-  #service_3 {
-    clip-path: polygon(0 50%, 10% 0, 100% 0, 100% 100%, 10% 100%);
-  }
-
-  #service_3 > .service__icon {
-    padding-left: 2.5rem;
   }
 }
 
