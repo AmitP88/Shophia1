@@ -386,6 +386,47 @@ hr {
   object-fit: cover;
 }
 
+/* ===================== Services Banner Section ========================= */
+
+#service_1, #service_3 {
+  color: white;
+  background-color: tan;
+}
+
+#service_2 {
+  color: white;
+  background-color: black;
+  margin: 0 1rem;
+}
+
+.services__banner-service {
+  display: flex;
+}
+
+.services__banner-service > .service__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.services__banner-service > .service__text {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.services__banner-service > .service__text > h2 {
+  font-size: 1.25rem;
+  font-family: "OpenSans";
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.services__banner-service > .service__text > p {
+  font-size: x-small;
+}
 
 /* ======================== Media Queries  ========================= */
 
@@ -429,6 +470,7 @@ hr {
 
 /* Desktop */
 @media only screen and (min-width: 1024px) {
+  /* ============================== Header ================================== */
   .mobile__header {
     display: none;
   }
@@ -459,6 +501,8 @@ hr {
   .bottom__header > .bottom__header-top > .bottom__header-social > .social__buttons {
     padding-right: 1rem;
   }
+
+  /* ============================== Slideshow ================================== */
 
   .slideshow-container {
     margin-top: -50px;
@@ -528,9 +572,21 @@ hr {
     height: 60vh;
   }
 
+  /* ============================== Services Banner ================================== */
+  .services__banner {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 6rem;
+  }
+
+  .services__banner-service {
+    width: 33.33%;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
+  /* ============================== Header ================================== */
+
   .bottom__header > .bottom__header-top > .bottom__header-title {
     margin-right: 4rem;
   }
@@ -546,6 +602,8 @@ hr {
   .bottom__header > .bottom__header-top > .bottom__header-social {
     margin-top: 0;
   }
+
+  /* ============================== Slideshow ================================== */
 
   .mySlides > img {
     height: 70vh;
@@ -583,6 +641,8 @@ hr {
 }
 
 @media only screen and (min-width: 1400px) {
+  /* ============================== Slideshow ================================== */
+
   .transparent-overlay {
     height: 99.5%;
   }
@@ -629,6 +689,8 @@ hr {
 }
 
 @media only screen and (min-width: 1600px) {
+  /* ============================== Slideshow ================================== */
+
   .mySlides > img {
     height: 100vh;
   }
