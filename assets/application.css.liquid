@@ -403,7 +403,8 @@ hr {
   padding: 0.25rem 0;
   margin: 1rem auto;
   width: 75%;
-  padding-left: 1rem;
+  justify-content: flex-start;
+  padding-left: 0;
 }
 
 .services__banner-service > .service__icon {
@@ -446,15 +447,22 @@ hr {
 
 @media only screen and (min-width: 375px) {
   .services__banner-service {
-    padding-left: 2rem;
+    width: 65%;
   }
 }
 
 @media only screen and (min-width: 425px) {
   .services__banner-service {
-    width: 65%;
+    width: 60%;
   }
 }
+
+@media only screen and (min-width: 500px) {
+  .services__banner-service {
+    width: 50%;
+  }
+}
+
 
 /* Tablet */
 @media only screen and (min-width: 600px) {
@@ -464,6 +472,11 @@ hr {
 
   .mySlides__overlay-content {
     top: 15%;
+  }
+
+  .services__banner-service {
+    width: 40%;
+    padding-left: 0;
   }
 }
 
