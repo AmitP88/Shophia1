@@ -432,6 +432,60 @@ hr {
   font-size: x-small;
 }
 
+/* ===================== Handpicked Section ========================= */
+
+.handpicked {
+  margin-top: 3rem;
+}
+
+.handpicked > .handpicked__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.handpicked > .handpicked__title > .line {
+  border-bottom: 0.5px solid tan;
+  width: 100%;
+  margin: 0 15px;
+}
+
+/* .handpicked > .handpicked__title > .diamond {
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  background-color: tan;
+  width: 60px;
+  height: 10px;
+} */
+
+
+
+.handpicked > .handpicked__title > .diamond {
+  width: 0;
+  height: 0;
+  position: relative;
+  top: -0.5rem;
+  border: 0.5rem solid transparent;
+  border-bottom-color: tan;
+}
+
+ .handpicked > .handpicked__title > .diamond:after {
+  content: '';
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: -0.5rem;
+  top: 0.5rem;
+  border: 0.5rem solid transparent;
+  border-top-color: tan;
+ }
+
+.handpicked > .handpicked__title > h3 {
+  font-family: "EurotypoBKL_Italic";
+  font-size: larger;
+  font-weight: bold;
+  margin: 0 20px;
+}
+
 /* ======================== Media Queries  ========================= */
 
 /* Mobile */
