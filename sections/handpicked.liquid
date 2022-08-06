@@ -2,9 +2,31 @@
   <div class="handpicked__title">
     <span class="line"></span>
     <span class="diamond"></span>
-    <h3>HandPicked</h3>
+    <h3>{{ section.settings.title }}</h3>
     <span class="diamond"></span>
     <span class="line"></span>
   </div>
-  <div class="handpicked__grid"></div>
+  <div class="handpicked__grid">
+    <div class="handpicked__grid-cell">Product</div>
+    <div class="handpicked__grid-cell">Discount</div>
+    <div class="handpicked__grid-cell">Collection</div>
+    <div class="handpicked__grid-cell">Discount</div>
+    <div class="handpicked__grid-cell">Product</div>
+  </div>
 </div>
+
+{% schema %}
+  {
+    "name": "handpicked",
+    "tag": "section",
+    "class": "handpicked",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "HandPicked"
+      }
+    ]
+  }
+{% endschema %}
