@@ -6,12 +6,37 @@
     <span class="diamond"></span>
     <span class="line"></span>
   </div>
+
   <div class="handpicked__grid">
-    <div class="handpicked__grid-cell">Product</div>
-    <div class="handpicked__grid-cell">Discount</div>
-    <div class="handpicked__grid-cell">Collection</div>
-    <div class="handpicked__grid-cell">Discount</div>
-    <div class="handpicked__grid-cell">Product</div>
+
+      <div class="handpicked__grid-cell">
+        {% for product in collections['paris-hilton'].products %}
+          {% if product.handle == 'womens-leather-boots' %}
+            {{ product.featured_image | img_url: 'medium' | img_tag }}
+          {% endif %}
+        {% endfor %}
+      </div>
+      <div class="handpicked__grid-cell promo__1">
+        <img src="{{ section.settings.promo_1_image | img_url: 'medium' }}">
+        <p>{{ section.settings.promo_1_title }}</p>
+        <p>{{ section.settings.promo_1_subtitle }}</p>
+      </div>
+      <div class="handpicked__grid-cell collection">
+        {{ collections['paris-hilton'].image | img_url: 'medium' | img_tag }}
+        <p>{{ collections['paris-hilton'].title }}</p>
+        <p>Collection</p>
+      </div>
+      <div class="handpicked__grid-cell promo__2">
+        <img src="{{ section.settings.promo_2_image | img_url: 'medium' }}">
+        <p>{{ section.settings.promo_2_title }}</p>
+      </div>
+      <div class="handpicked__grid-cell">
+        {% for product in collections['paris-hilton'].products %}
+          {% if product.handle == 'luggage-tag' %}
+            {{ product.featured_image | img_url: 'medium' | img_tag }}
+          {% endif %}
+        {% endfor %}
+      </div>
   </div>
 </div>
 
@@ -26,6 +51,35 @@
         "id": "title",
         "label": "Title",
         "default": "HandPicked"
+      },
+      {
+        "type": "image_picker",
+        "id": "promo_1_image",
+        "label": "Promo 1 Image"
+      },
+      {
+        "type": "text",
+        "id": "promo_1_title",
+        "label": "Promo 1 Title",
+        "default": "Discount 30%"
+      },
+      {
+        "type": "text",
+        "id": "promo_1_subtitle",
+        "label": "Promo 1 Subtitle",
+        "default": "Jewellery Product"
+      },
+
+      {
+        "type": "image_picker",
+        "id": "promo_2_image",
+        "label": "Promo 2 Image"
+      },
+      {
+        "type": "text",
+        "id": "promo_2_title",
+        "label": "Promo 2 Title",
+        "default": "50% Off"
       }
     ]
   }
