@@ -578,6 +578,34 @@ hr {
   width: min-content;
 }
 
+.handpicked > .handpicked__grid > .product {
+  position: relative;
+}
+
+.handpicked > .handpicked__grid > .product > .transparent-overlay {
+  width: 90%;
+  height: 87%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.handpicked > .handpicked__grid > .product > a {
+  position: absolute;
+  left: 50%;
+  bottom: 20%;
+  transform: translate(-50%, 0);
+  z-index: 3;
+}
+
+.handpicked > .handpicked__grid > .product > a > button {
+  border: none;
+  background-color: orange;
+  color: white;
+  text-transform: uppercase;
+  padding: 0.5rem 0.75rem;
+}
+
 /* ======================== Media Queries  ========================= */
 
 /* Mobile */
