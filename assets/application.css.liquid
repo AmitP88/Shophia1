@@ -1032,6 +1032,37 @@ hr {
     margin-top: 2rem;
   }
 
+  .handpicked > .handpicked__grid > .product > .plus-sign > span:first-child {
+    border: 0.1px solid tan;
+    width: 50px;
+    height: 0.1px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: tan;
+  }
+
+  .handpicked > .handpicked__grid > .product > .plus-sign > span:nth-child(2) {
+    border: 0.1px solid tan;
+    width: 50px;
+    height: 0.1px;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: rotate(90deg);
+    background-color: tan;
+  }
+
+  .handpicked > .handpicked__grid > .product > .plus-sign {
+    display: none;
+    cursor: pointer;
+  }
+
+  .handpicked > .handpicked__grid > .product:hover > .plus-sign {
+    display: initial;
+  }
+
   .handpicked > .handpicked__grid > .product > a > button {
     cursor: pointer;
   }

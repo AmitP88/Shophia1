@@ -12,6 +12,10 @@
       {% for product in collections['paris-hilton'].products %}
         {% if product.handle == 'womens-leather-boots' %}
           {{ product.featured_image | img_url: 'medium' | img_tag }}
+          <div class="plus-sign">
+            <span></span>
+            <span></span>
+          </div>
           <a href="#">
             <button>Shop Now</button>
           </a>
