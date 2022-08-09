@@ -990,6 +990,62 @@ hr {
     font-size: 1.3rem;
   }
 
+  .handpicked > .handpicked__title {
+    padding: 0 5rem;
+  }
+
+  .handpicked > .handpicked__title > .line:first-child {
+    margin-right: 40px;
+  }
+
+  .handpicked > .handpicked__title > .line:nth-child(5) {
+    margin-left: 40px;
+  }
+
+  .handpicked > .handpicked__title > .diamond {
+    width: 0;
+    height: 0;
+    position: relative;
+    top: -0.4rem;
+    border: 0.4rem solid transparent;
+    border-bottom-color: tan;
+  }
+  
+   .handpicked > .handpicked__title > .diamond:after {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: -0.4rem;
+    top: 0.4rem;
+    border: 0.4rem solid transparent;
+    border-top-color: tan;
+   }
+
+  .handpicked > .handpicked__title > h3 {
+    font-size: x-large;
+    margin: 0 40px;
+  }
+
+  .handpicked > .handpicked__grid {
+    padding: 2rem 5rem;
+    margin-top: 2rem;
+  }
+
+  .handpicked > .handpicked__grid > .product > a > button {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .handpicked > .handpicked__grid > .promo__1 > p:nth-child(2) {
+    top: 2.5rem;
+    font-size: larger;
+  }
+  
+  .handpicked > .handpicked__grid > .promo__1 > p:nth-child(3) {
+    top: 4rem;
+    font-size: 0.70rem;
+  }
+
 }
 
 @media only screen and (min-width: 1200px) {
