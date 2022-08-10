@@ -13,6 +13,15 @@
     {% for product in collections[featured_collection].products %}
       <div class="product">
         {{ product.featured_image | img_url: 'medium' | img_tag }}
+        {% capture discount %}
+          {{ product.compare_at_price_max | minus:product.price | times:100 | divided_by:product.compare_at_price_max }}
+        {% endcapture %}
+        {% if product.compare_at_price %}
+          <span>
+            {{ discount }}
+            <span>&#65130;</span>
+          </span> 
+        {% endif %}
         <a href="#">
           <button class="add_to_cart">+ Add To Cart</button>          
         </a>
