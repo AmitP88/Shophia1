@@ -1,10 +1,20 @@
+{% assign featured_collection = section.settings.featured_collection %}
+
 <div class="featured__collection">
   <div class="featured__collection-title">
     <span class="line"></span>
     <span class="diamond"></span>
-    <h3>{{ section.settings.featured_collection.title }}</h3>
+    <h3>{{ featured_collection.title }}</h3>
     <span class="diamond"></span>
     <span class="line"></span>
+  </div>
+
+  <div class="featured__collection-grid">
+    {% for product in collections[featured_collection].products %}
+      <div class="product">
+        {{ product.featured_image | img_url: 'medium' | img_tag }}
+      </div>
+    {% endfor %}
   </div>
 </div> 
 
