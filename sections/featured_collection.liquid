@@ -1,0 +1,24 @@
+<div class="featured__collection">
+  <div class="featured__collection-title">
+    <span class="line"></span>
+    <span class="diamond"></span>
+    <h3>{{ section.settings.featured_collection.title }}</h3>
+    <span class="diamond"></span>
+    <span class="line"></span>
+  </div>
+</div> 
+
+{% schema %}
+  {
+    "name": "featured collection",
+    "tag": "section",
+    "class": "featured_collection",
+    "settings": [
+      {
+        "type": "collection",
+        "id": "featured_collection",
+        "label": "Featured Collection"
+      }
+    ]
+  }
+{% endschema %}
