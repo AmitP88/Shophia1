@@ -760,6 +760,23 @@ hr {
   .handpicked > .handpicked__grid > .promo__2 > p {
     font-size: xxx-large;
   }
+
+  .featured__collection > .featured__collection-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 1rem;
+    padding: 0.3rem;
+  }
+
+  .featured__collection > .featured__collection-grid > .product {
+    margin: 0.3rem;
+    width: auto;
+  }
+
+  .featured__collection > .featured__collection-grid > .product > a > button {
+    font-size: x-small;
+  }
+
 }
 
 @media only screen and (min-width: 425px) {
@@ -802,6 +819,10 @@ hr {
   
   .handpicked > .handpicked__grid > .collection > p:nth-child(3) {
     top: 14rem;
+  }
+
+  .featured__collection > .featured__collection-grid > .product > a > button {
+    font-size: small;
   }
 }
 
