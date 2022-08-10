@@ -13,6 +13,9 @@
     {% for product in collections[featured_collection].products %}
       <div class="product">
         {{ product.featured_image | img_url: 'medium' | img_tag }}
+        <a href="#">
+          <button class="add_to_cart">+ Add To Cart</button>          
+        </a>
       </div>
     {% endfor %}
   </div>
