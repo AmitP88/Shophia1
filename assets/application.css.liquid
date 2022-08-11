@@ -1152,6 +1152,53 @@ hr {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   }
+
+  .testimonials__grid-cell {
+    display: flex;
+  }
+
+  .testimonials__grid-cell > .testimonial-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .testimonials__grid-cell > .testimonial-image {
+    margin-bottom: 0;
+  }  
+
+  #testimonial-1 {
+    margin-top: 1rem;
+  }
+
+  #testimonial-1 > .testimonial-text > .quote {
+    text-align: end;
+  }
+
+  #testimonial-1 > .testimonial-text > .name {
+    text-align: end;
+  }
+
+  #testimonial-1 > .testimonial-text > .occupation {
+    text-align: end;
+  }
+
+  #testimonial-2 {
+    flex-direction: row-reverse;
+  }
+
+  #testimonial-2 > .testimonial-text > .quote {
+    text-align: start;
+  }
+
+  #testimonial-2 > .testimonial-text > .name {
+    text-align: start;
+  }
+
+  #testimonial-2 > .testimonial-text > .occupation {
+    text-align: start;
+  }
+
 }
 
 @media only screen and (min-width: 768px) {
