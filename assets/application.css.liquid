@@ -792,7 +792,7 @@ hr {
 
 .testimonials > .testimonials__title > .line {
   border-bottom: 0.5px solid tan;
-  width: 15%;
+  width: 10%;
   margin: 0 15px;
 }
 
@@ -824,9 +824,27 @@ hr {
   width: max-content;
 }
 
+.testimonials > .testimonials__grid  > .testimonials__polygon {
+  padding-bottom: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.testimonials > .testimonials__grid  > .testimonials__polygon > .testimonials__polygon-shape {
+  width: 100%;
+  height: 30px;
+  background-color: white;
+  clip-path: polygon(0 0, 50% 100%, 100% 0);
+  border-top: 1px solid white;
+  position: relative;
+  margin: 0 auto;
+  z-index: 2;
+}
+
 .testimonials > .testimonials__grid {
   background-color: tan;
   padding: 2rem;
+  padding-top: 0;
 }
 
 .testimonials > .testimonials__grid > .testimonials__grid-cell > .testimonial-image {
@@ -857,7 +875,7 @@ hr {
 }
 
 #testimonial-1 {
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
 }
 
 #testimonial-2 > .testimonial-image {
