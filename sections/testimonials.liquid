@@ -12,25 +12,27 @@
       <div class="testimonials__polygon-shape"></div>
     </div>
 
-    <div class="testimonials__grid-cell" id="testimonial-1">
-      <div class="testimonial-image">
-        {{ section.settings.testimonial_1_image | img_url: 'medium' | img_tag }}
+    <div class="testimonials__grid-container">
+      <div class="testimonials__grid-cell" id="testimonial-1">
+        <div class="testimonial-image">
+          {{ section.settings.testimonial_1_image | img_url: 'medium' | img_tag }}
+        </div>
+        <div class="testimonial-text">
+          <p class="quote">{{ section.settings.testimonial_1_quote }}</p>
+          <h2 class="name">{{ section.settings.testimonial_1_name }}</h2>
+          <p class="occupation">{{ section.settings.testimonial_1_occupation }}</p>
+        </div>
       </div>
-      <div class="testimonial-text">
-        <p class="quote">{{ section.settings.testimonial_1_quote }}</p>
-        <h2 class="name">{{ section.settings.testimonial_1_name }}</h2>
-        <p class="occupation">{{ section.settings.testimonial_1_occupation }}</p>
-      </div>
-    </div>
-    <div class="testimonials__grid-cell" id="testimonial-2">
-      <div class="testimonial-image">
-        {{ section.settings.testimonial_2_image | img_url: 'medium' | img_tag }}
-      </div>
-      <div class="testimonial-text">
-        <p class="quote">{{ section.settings.testimonial_2_quote }}</p>
-        <h2 class="name">{{ section.settings.testimonial_2_name }}</h2>
-        <p class="occupation">{{ section.settings.testimonial_2_occupation }}</p>
-      </div>
+      <div class="testimonials__grid-cell" id="testimonial-2">
+        <div class="testimonial-image">
+          {{ section.settings.testimonial_2_image | img_url: 'medium' | img_tag }}
+        </div>
+        <div class="testimonial-text">
+          <p class="quote">{{ section.settings.testimonial_2_quote }}</p>
+          <h2 class="name">{{ section.settings.testimonial_2_name }}</h2>
+          <p class="occupation">{{ section.settings.testimonial_2_occupation }}</p>
+        </div>
+      </div>      
     </div>
   </div>
 </div>

@@ -847,11 +847,11 @@ hr {
   padding-top: 0;
 }
 
-.testimonials > .testimonials__grid > .testimonials__grid-cell > .testimonial-image {
+.testimonials > .testimonials__grid > .testimonials__grid-container > .testimonials__grid-cell > .testimonial-image {
   margin-bottom: 2rem;
 }
 
-.testimonials > .testimonials__grid > .testimonials__grid-cell > .testimonial-text > .quote {
+.testimonials > .testimonials__grid > .testimonials__grid-container > .testimonials__grid-cell > .testimonial-text > .quote {
   color: white;
   font-family: "EurotypoBKL_Italic";
   font-size: large;
@@ -859,7 +859,7 @@ hr {
   line-height: 1.5rem;
 }
 
-.testimonials > .testimonials__grid > .testimonials__grid-cell > .testimonial-text > .name {
+.testimonials > .testimonials__grid > .testimonials__grid-container > .testimonials__grid-cell > .testimonial-text > .name {
   color: black;
   font-family: "EurotypoBKL_Italic";
   font-size: x-large;
@@ -867,7 +867,7 @@ hr {
   margin: 2rem 0 1rem 0;
 }
 
-.testimonials > .testimonials__grid > .testimonials__grid-cell > .testimonial-text > .occupation {
+.testimonials > .testimonials__grid > .testimonials__grid-container > .testimonials__grid-cell > .testimonial-text > .occupation {
   color: gray;
   font-size: x-small;
   font-weight: bold;
@@ -1522,6 +1522,24 @@ hr {
   .brands > .brands__grid {
     margin: 0 4rem;
   }
+
+  .testimonials > .testimonials__grid {
+    padding: 0 2rem;
+  }
+
+  .testimonials > .testimonials__grid > .testimonials__grid-container {
+    display: flex;
+    padding: 0 2rem;
+  }
+
+  #testimonial-1 {
+    margin: 0;
+  }
+
+  #testimonial-2 > .testimonial-text > .quote {
+    text-align: end;
+  }
+  
 
 }
 
