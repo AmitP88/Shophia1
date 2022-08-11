@@ -614,7 +614,7 @@ hr {
 /* ===================== Collection Section ========================= */
 
 .featured__collection {
-  margin-top: 3rem;
+  margin: 3rem auto;
 }
 
 .featured__collection > .featured__collection-title {
@@ -949,7 +949,7 @@ hr {
   .featured__collection > .featured__collection-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    margin: 3rem 0.5rem 0.5rem;
+    margin: 3rem 0.75rem;
     padding: 0.3rem;
   }
 
@@ -1265,6 +1265,9 @@ hr {
     font-size: 0.70rem;
   }
 
+  .featured__collection > .featured__collection-grid {
+    margin: 0 6rem;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -1364,6 +1367,10 @@ hr {
 
   .handpicked > .handpicked__grid > .promo__2 > p {
     font-size: 3rem;
+  }
+
+  .featured__collection > .featured__collection-grid > .product > a > button {
+    font-size: small;
   }
 
 }
