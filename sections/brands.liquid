@@ -1,0 +1,25 @@
+<div class="brands">
+  <div class="brands__title">
+    <span class="line"></span>
+    <span class="diamond"></span>
+    <h3>{{ section.settings.title }}</h3>
+    <span class="diamond"></span>
+    <span class="line"></span>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "brands",
+    "tag": "section",
+    "class": "brands",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Section Title",
+        "default": "Our Brand"
+      }
+    ]
+  }
+{% endschema %}

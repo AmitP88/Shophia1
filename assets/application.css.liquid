@@ -721,6 +721,57 @@ hr {
   width: max-content;
 }
 
+/* ===================== Brands Section ========================= */
+
+.brands {
+  margin: 3rem auto;
+}
+
+.brands > .brands__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.brands > .brands__title > .line {
+  border-bottom: 0.5px solid tan;
+  width: 15%;
+  margin: 0 15px;
+}
+
+.brands > .brands__title > .diamond {
+  width: 0;
+  height: 0;
+  position: relative;
+  top: -0.3rem;
+  border: 0.3rem solid transparent;
+  border-bottom-color: tan;
+}
+
+.brands > .brands__title > .diamond:after {
+  content: '';
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: -0.3rem;
+  top: 0.3rem;
+  border: 0.3rem solid transparent;
+  border-top-color: tan;
+ }
+
+ .brands > .brands__title > h3 {
+  font-family: "EurotypoBKL_Italic";
+  font-size: larger;
+  font-weight: bold;
+  margin: 0 20px;
+  width: max-content;
+}
+
+
+
+
+
 /* ======================== Media Queries  ========================= */
 
 /* Mobile */
