@@ -6,6 +6,18 @@
     <span class="diamond"></span>
     <span class="line"></span>
   </div>
+
+  <div class="brands__grid">
+    {% for block in section.blocks %}
+      {% case block.type %}
+        {% when 'brand_logo' %}
+          <div class="brands__grid-logo">
+            {{ block.settings.brand_logo | img_url: 'medium' | img_tag }}
+          </div>
+        {% else %}
+      {% endcase %}
+    {% endfor %}
+  </div>
 </div>
 
 {% schema %}
@@ -19,6 +31,47 @@
         "id": "title",
         "label": "Section Title",
         "default": "Our Brand"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "brand logo",
+        "type": "brand_logo",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "brand_logo",
+            "label": "Brand Logo"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "brands",
+        "settings": {
+          "title": "Our Brand"
+        },
+        "blocks": [
+          {
+            "type": "brand_logo"
+          },
+          {
+            "type": "brand_logo"
+          },
+          {
+            "type": "brand_logo"
+          },
+          {
+            "type": "brand_logo"
+          },
+          {
+            "type": "brand_logo"
+          },
+          {
+            "type": "brand_logo"
+          }
+        ]
       }
     ]
   }
