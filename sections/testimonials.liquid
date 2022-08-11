@@ -6,6 +6,29 @@
     <span class="diamond"></span>
     <span class="line"></span>
   </div>
+
+  <div class="testimonials__grid">
+    <div class="testimonials__grid-cell" id="testimonial-1">
+      <div class="testimonial-image">
+        {{ section.settings.testimonial_1_image | img_url: 'medium' | img_tag }}
+      </div>
+      <div class="testimonial-text">
+        <p class="quote">{{ section.settings.testimonial_1_quote }}</p>
+        <h2 class="name">{{ section.settings.testimonial_1_name }}</h2>
+        <p class="occupation">{{ section.settings.testimonial_1_occupation }}</p>
+      </div>
+    </div>
+    <div class="testimonials__grid-cell" id="testimonial-2">
+      <div class="testimonial-image">
+        {{ section.settings.testimonial_2_image | img_url: 'medium' | img_tag }}
+      </div>
+      <div class="testimonial-text">
+        <p class="quote">{{ section.settings.testimonial_2_quote }}</p>
+        <h2 class="name">{{ section.settings.testimonial_2_name }}</h2>
+        <p class="occupation">{{ section.settings.testimonial_2_occupation }}</p>
+      </div>
+    </div>
+  </div>
 </div>
 
 {% schema %}
@@ -19,6 +42,52 @@
         "id": "title",
         "label": "Section Title",
         "default": "Customer Says"
+      },
+      {
+        "type": "image_picker",
+        "id": "testimonial_1_image",
+        "label": "Testimonial 1 Image"
+      },
+      {
+        "type": "text",
+        "id": "testimonial_1_quote",
+        "label": "Testimonial 1 Quote",
+        "default": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque"
+      },
+      {
+        "type": "text",
+        "id": "testimonial_1_name",
+        "label": "Testimonial 1 Name",
+        "default": "Sandra Dewi"
+      },
+      {
+        "type": "text",
+        "id": "testimonial_1_occupation",
+        "label": "Testimonial 1 Occupation",
+        "default": "Fashion Stylish"
+      },
+      {
+        "type": "image_picker",
+        "id": "testimonial_2_image",
+        "label": "Testimonial 2 Image"
+      },
+      {
+        "type": "text",
+        "id": "testimonial_2_quote",
+        "label": "Testimonial 2 Quote",
+        "default": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque"
+      },
+      {
+        "type": "text",
+        "id": "testimonial_2_name",
+        "label": "Testimonial 2 Name",
+        "default": "Sandra Dewi"
+      },
+      {
+        "type": "text",
+        "id": "testimonial_2_occupation",
+        "label": "Testimonial 2 Occupation",
+        "default": "Fashion Stylish"
       }
     ]
   }
