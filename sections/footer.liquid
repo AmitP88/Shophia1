@@ -1,4 +1,18 @@
 <footer>
-  <div class="large__footer">large footer</div>
-  <div class="small__footer">small footer</div>
+  <div class="large__footer">
+    <div class="large__footer-left">
+      <div class="menu-1">
+        <p class="menu-1__title">{{ linklists.shops.title }}</p>
+          <ul class="menu-1__linklist">
+            {% for link in linklists.shops.links %}
+              <li class="menu-1__linklist-link">
+                <a href="{{ link.url }}">{{ link.title }}</a>
+              </li>
+            {% endfor %}       
+          </ul>
+      </div>
+    </div>
+    <div class="large__footer-right"></div>
+  </div>
+  <div class="small__footer"></div>
 </footer>
