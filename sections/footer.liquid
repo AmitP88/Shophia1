@@ -11,6 +11,28 @@
           {% endfor %}
         </ul>
       </div>
+
+      <div class="menu">
+        <p class="menu__title">{{ linklists.information.title }}</p>
+        <ul class="menu__linklist">
+          {% for link in linklists.information.links %}
+            <li class="menu__linklist-link">
+              <a href="{{ link.url }}">{{ link.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="menu">
+        <p class="menu__title">{{ linklists.customer-service.title }}</p>
+        <ul class="menu__linklist">
+          {% for link in linklists.customer-service.links %}
+            <li class="menu__linklist-link">
+              <a href="{{ link.url }}">{{ link.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
     </div>
     <div class="large__footer-right"></div>
   </div>
