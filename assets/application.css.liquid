@@ -902,6 +902,10 @@ footer {
   padding: 2rem;
 }
 
+footer > .large__footer {
+  margin: 2rem 0;
+}
+
 footer > .large__footer > .large__footer-left > .menu:nth-child(2) {
   margin-top: 3rem;
 }
@@ -941,7 +945,15 @@ footer > .large__footer > .large__footer-right > .social__media > .social__media
 
 footer > .large__footer > .large__footer-right > .social__media > .social__media-icons {
   display: flex;
-  justify-content: space-between;
+  width: min-content;
+}
+
+footer > .large__footer > .large__footer-right > .social__media > .social__media-icons > .icon {
+  margin: 0 7px;
+}
+
+footer > .large__footer > .large__footer-right > .social__media > .social__media-icons > .icon:first-child {
+  margin-left: 0;
 }
 
 footer > .large__footer > .large__footer-right > .social__media > .social__media-icons > .icon {
@@ -976,6 +988,7 @@ footer > .large__footer > .large__footer-right > .subscribe > .subscribe-email {
   justify-content: space-between;  
   border: 1px solid #737373;
   padding: 0 5px;
+  max-width: 360px;
 }
 
 footer > .large__footer > .large__footer-right > .subscribe > .subscribe-email > input {
@@ -1155,11 +1168,6 @@ footer > .large__footer > .large__footer-right > .subscribe > .subscribe-email >
     margin-top: 0;
     margin-left: 0;
   }
-
-  footer > .large__footer > .large__footer-right > .social__media > .social__media-icons {
-    width: 65%;
-  }
-
 }
 
 
