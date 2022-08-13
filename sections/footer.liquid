@@ -70,5 +70,84 @@
       <hr>
       <div class="polygon"></div>
     </div>
+    <div class="small__footer-content">
+      <div class="content__left">
+        <div class="content__left-text">
+          <p>{{ section.settings.copyright }}</p>
+          <p>{{ section.settings.rights_reserved }}</p>
+          <p>{{ section.settings.designed_by }}</p>
+        </div>
+        <div class="content__left-images">
+          {% for block in section.blocks %}
+            {% case block.type %}
+              {% when "credit_card_logo" %}
+                {{ block.settings.image | img_url: 'medium' | img_tag }}
+              {% else %}
+            {% endcase %}
+          {% endfor %}
+        </div>
+      </div>
+      <div class="content__right"></div>
+    </div>
   </div>
 </footer>
+
+{% schema %}
+  {
+    "name": "footer",
+    "tag": "section",
+    "class": "footer",
+    "settings": [
+      {
+        "type": "text",
+        "id": "copyright",
+        "label": "Copyright",
+        "default": "Ⓒ 2015 Shophia Fashion Store Shopify."
+      },
+      {
+        "type": "text",
+        "id": "rights_reserved",
+        "label": "Rights Reserved",
+        "default": "All Rights Reserved. E-commerce Software by Shopify."
+      },
+      {
+        "type": "text",
+        "id": "designed_by",
+        "label": "Designed By",
+        "default": "Designed by MoccaLabs.com"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "credit_card_logo",
+        "type": "credit_card_logo",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "image"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "footer",
+        "blocks": [
+          {
+            "type": "credit_card_logo"
+          },
+          {
+            "type": "credit_card_logo"
+          },
+          {
+            "type": "credit_card_logo"
+          },
+          {
+            "type": "credit_card_logo"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
