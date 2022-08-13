@@ -1346,7 +1346,11 @@ footer > .large__footer > .large__footer-right > .subscribe > .subscribe-email >
 
   footer {
     padding: 1.5rem;
-  }  
+  }
+
+  footer > .large__footer {
+    padding: 0 1rem;
+  }
 
   footer > .large__footer > .large__footer-left {
     display: grid;
@@ -1363,25 +1367,9 @@ footer > .large__footer > .large__footer-right > .subscribe > .subscribe-email >
     margin-left: 0;
   }
 
-  footer > .large__footer > .large__footer-right {
-    display: flex;
-    justify-content: flex-start;
-  }
-
-  footer > .large__footer > .large__footer-right > .subscribe {
-    margin-left: 2.5%;
-    margin-right: 2.5%;
-    width: 100%;
-  }
-
   footer > .large__footer > .large__footer-right > .subscribe > .subscribe-email {
     max-width: 360px;
   }
-
-  footer > .large__footer > .large__footer-right > .subscribe > .subscribe-email > input {
-    font-size: 0.70rem;
-  }
-
 }
 
 @media only screen and (min-width: 768px) {
@@ -1457,6 +1445,10 @@ footer > .large__footer > .large__footer-right > .subscribe > .subscribe-email >
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 
+  footer > .large__footer {
+    padding: 0 2rem;
+  }
+
   footer > .large__footer > .large__footer-right {
     display: flex;
     justify-content: space-between;
@@ -1464,7 +1456,6 @@ footer > .large__footer > .large__footer-right > .subscribe > .subscribe-email >
 
   footer > .large__footer > .large__footer-right > .subscribe {
     margin-left: 10%;
-    margin-right: 10%;
   }
 
   footer > .large__footer > .large__footer-right > .subscribe > .subscribe-email > input {
