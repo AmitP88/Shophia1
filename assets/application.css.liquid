@@ -1456,10 +1456,11 @@ footer > .large__footer > .large__footer-right > .subscribe > .subscribe-email >
 
   footer > .large__footer > .large__footer-right > .subscribe {
     margin-left: 10%;
+    margin-right: 10%;
   }
 
   footer > .large__footer > .large__footer-right > .subscribe > .subscribe-email > input {
-    font-size: small;
+    font-size: x-small;
   }
 
 }
@@ -1718,7 +1719,34 @@ footer > .large__footer > .large__footer-right > .subscribe > .subscribe-email >
   #testimonial-2 > .testimonial-text > .quote {
     text-align: end;
   }
-  
+
+  footer > .large__footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5rem;
+  }
+
+  footer > .large__footer > .large__footer-left {
+    grid-gap: 1.5rem;
+  }
+
+  footer > .large__footer > .large__footer-right {
+    flex-direction: column;
+    justify-content: unset;
+  }
+
+  footer > .large__footer > .large__footer-right > .social__media {
+    margin-top: 0;
+  }  
+
+  footer > .large__footer > .large__footer-right > .subscribe {
+    margin-top: 5rem;
+    margin-left: 0;
+  }
+
+  footer > .large__footer > .large__footer-right > .subscribe > .subscribe-email > input {
+    font-size: small;
+  }
 
 }
 
@@ -1825,6 +1853,10 @@ footer > .large__footer > .large__footer-right > .subscribe > .subscribe-email >
     font-size: small;
   }
 
+  footer > .large__footer > .large__footer-left {
+    grid-gap: 3rem;
+  }
+
 }
 
 @media only screen and (min-width: 1400px) {
@@ -1874,6 +1906,14 @@ footer > .large__footer > .large__footer-right > .subscribe > .subscribe-email >
 
   .services__banner-service > .service__text > h2 {
     font-size: 1.75rem;
+  }
+
+  footer > .large__footer > .large__footer-left {
+    grid-gap: 5rem;
+  }
+
+  footer > .large__footer > .large__footer-right {
+    margin-right: 10%;
   }
 
 }
