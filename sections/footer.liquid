@@ -88,11 +88,33 @@
         </div>
       </div>
       <div class="content__right">
-        <button class="scroll__up">{{ section.settings.top_button_image | img_url: 'medium' | img_tag }}</button>
+        <button class="scroll__up" id="scroll_up_button" onclick="topFunction()">{{ section.settings.top_button_image | img_url: 'medium' | img_tag }}</button>
       </div>
     </div>
   </div>
 </footer>
+
+<script>
+  let scroll_up_button = document.getElementById("scroll_up_button");
+
+  window.onscroll = function() {
+    scrollFunction()
+  };
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      scroll_up_button.style.display = "block";
+    } else {
+      scroll_up_button.style.display = "none";
+    }
+  }
+
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+</script>
 
 {% schema %}
   {
