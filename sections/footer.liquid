@@ -87,7 +87,9 @@
           {% endfor %}
         </div>
       </div>
-      <div class="content__right"></div>
+      <div class="content__right">
+        <button class="scroll__up">{{ section.settings.top_button_image | img_url: 'medium' | img_tag }}</button>
+      </div>
     </div>
   </div>
 </footer>
@@ -115,6 +117,11 @@
         "id": "designed_by",
         "label": "Designed By",
         "default": "Designed by MoccaLabs.com"
+      },
+      {
+        "type": "image_picker",
+        "id": "top_button_image",
+        "label": "Top Button Image"
       }
     ],
     "blocks": [
