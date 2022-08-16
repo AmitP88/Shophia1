@@ -12,7 +12,7 @@
   <div class="featured__collection-grid">
     {% for product in collections[featured_collection].products %}
       <div class="product">
-        {{ product.featured_image | img_url: 'medium' | img_tag }}
+        {{ product.featured_image | img_url: 'master' | img_tag }}
         {% capture discount %}
           {{ product.compare_at_price_max | minus:product.price | times:100 | divided_by:product.compare_at_price_max }}
         {% endcapture %}

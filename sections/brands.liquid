@@ -12,7 +12,7 @@
       {% case block.type %}
         {% when 'brand_logo' %}
           <div class="brands__grid-logo">
-            {{ block.settings.brand_logo | img_url: 'medium' | img_tag }}
+            {{ block.settings.brand_logo | img_url: 'master' | img_tag }}
           </div>
         {% else %}
       {% endcase %}
