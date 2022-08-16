@@ -42,7 +42,7 @@
   <div class="desktop__header">
     <div class="top__header">
       <div class="top__header-phone">
-        <img src="{{ section.settings.phone_icon | img_url: 'medium' }}" class="phone__icon">
+        <img src="{{ section.settings.phone_icon | img_url: 'master' }}" class="phone__icon">
         <p class="phone__number">Call {{ section.settings.phone_number }}</p>
       </div>
 
@@ -75,7 +75,7 @@
           {% endfor %}
         </div>
         <div class="bottom__header-title">
-          <img src="{{ section.settings.logo | img_url: 'medium' }}" />
+          <img src="{{ section.settings.logo | img_url: 'master' }}" />
         </div>
         <div class="bottom__header-social">
           <div class="social__buttons">
