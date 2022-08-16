@@ -11,7 +11,7 @@
     <div class="handpicked__grid-cell product" id="cell-1">
       {% for product in collections['paris-hilton'].products %}
         {% if product.handle == 'womens-leather-boots' %}
-          {{ product.featured_image | img_url: 'medium' | img_tag }}
+          {{ product.featured_image | img_url: 'master' | img_tag }}
           <div class="plus-sign">
             <span></span>
             <span></span>
@@ -24,23 +24,23 @@
       {% endfor %}
     </div>
     <div class="handpicked__grid-cell promo__1" id="cell-2">
-      <img src="{{ section.settings.promo_1_image | img_url: 'medium' }}">
+      <img src="{{ section.settings.promo_1_image | img_url: 'master' }}">
       <p>{{ section.settings.promo_1_title }}</p>
       <p>{{ section.settings.promo_1_subtitle }}</p>
     </div>
     <div class="handpicked__grid-cell collection" id="cell-3">
-      {{ collections['paris-hilton'].image | img_url: 'medium' | img_tag }}
+      {{ collections['paris-hilton'].image | img_url: 'master' | img_tag }}
       <p>{{ collections['paris-hilton'].title }}</p>
       <p>Collection</p>
     </div>
     <div class="handpicked__grid-cell promo__2" id="cell-4">
-      <img src="{{ section.settings.promo_2_image | img_url: 'medium' }}">
+      <img src="{{ section.settings.promo_2_image | img_url: 'master' }}">
       <p>{{ section.settings.promo_2_title }}</p>
     </div>
     <div class="handpicked__grid-cell product" id="cell-5">
       {% for product in collections['paris-hilton'].products %}
         {% if product.handle == 'luggage-tag' %}
-          {{ product.featured_image | img_url: 'medium' | img_tag }}
+          {{ product.featured_image | img_url: 'master' | img_tag }}
           <div class="plus-sign">
             <span></span>
             <span></span>
