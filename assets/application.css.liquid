@@ -1315,20 +1315,30 @@ footer > .small__footer > .small__footer-content > .content__right > button.scro
     padding-left: 1rem;
   }
 
+  .services__banner-service > .service__icon {
+    width: 20px;
+    height: 20px;
+  }
+
   .services__banner > .services__banner-service > .service__text > h2 {
     font-size: 0.8rem;
+  }
+
+  .services__banner-service > .service__text > p {
+    font-size: 0.5rem;
   }
 
   .handpicked > .handpicked__grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    grid-gap: 0.5rem;
     margin: 0.5rem;
     margin-top: 3rem;
   }
 
   .handpicked > .handpicked__grid > .handpicked__grid-cell {
-    width: 95%;
+    width: auto;
     height: 100%;
     margin: 0 auto;
   }
@@ -1336,12 +1346,12 @@ footer > .small__footer > .small__footer-content > .content__right > button.scro
   .handpicked > .handpicked__grid > .handpicked__grid-cell > img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
   }  
 
   #cell-1 {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
-    margin-bottom: 1.5rem;
   }
 
   #cell-2 {
@@ -1352,19 +1362,18 @@ footer > .small__footer > .small__footer-content > .content__right > button.scro
   #cell-3 {
     grid-column: 2 / 3;
     grid-row: 1 / 3;
-    margin-top: -1.5rem;
+    height: 100%;
   }
 
   #cell-3 > img {
-    height: calc(100% + 0.75rem);
+    height: 100%;
+    object-position: right;
     object-fit: cover;
-    object-position: 100% 50%;
   }
 
   #cell-4 {
     grid-column: 3 / 4;
     grid-row: 1 / 2;
-    margin-bottom: 1.5rem;
   }
 
   #cell-5 {
@@ -1379,24 +1388,30 @@ footer > .small__footer > .small__footer-content > .content__right > button.scro
 
   .handpicked > .handpicked__grid > .promo__1 > p:nth-child(2) {
     top: 2rem;
-    font-size: medium;
+    font-size: 0.9rem;
   }
   
   .handpicked > .handpicked__grid > .promo__1 > p:nth-child(3) {
-    top: 3rem;
-    font-size: xx-small;
+    top: 2.8rem;
+    font-size: 0.5rem;
   }
 
   .handpicked > .handpicked__grid > .promo__2 > p {
-    font-size: xx-large;
+    font-size: 1.7rem;
+  }
+
+  .handpicked > .handpicked__grid > .collection > p {
+    margin-left: 0 !important;
   }
 
   .handpicked > .handpicked__grid > .collection > p:nth-child(2) {
     font-size: large;
+    top: 9rem;
   }
 
   .handpicked > .handpicked__grid > .collection > p:nth-child(3) {
     font-size: larger;
+    top: 11rem;
   }
 
   .featured__collection > .featured__collection-grid {
