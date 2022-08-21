@@ -16,7 +16,13 @@
   </div>
 
   <div class="product__page-right">
-    <h1>{{ product.title }}</h1>
+    <div class="title">
+      <h1>{{ product.title }}</h1>
+      {{ current_variant.price | money }}
+    </div>
+
+    <hr>
+
     <form action="/cart/add" method="post" enctype="multipart/form-data" id="AddToCartForm">
       <div class="variant">
         <select name="id" id="productSelect">
@@ -32,7 +38,6 @@
             {% endif %}
           {% endfor %}
         </select>
-        {{ current_variant.price | money }}        
       </div>
 
       <div class="quantity">
