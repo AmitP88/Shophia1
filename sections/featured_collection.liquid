@@ -13,7 +13,9 @@
     {% for product in collections[featured_collection].products %}
       <div class="product">
         {{ product.featured_image | img_url: 'master' | img_tag }}
-        <div class="product__overlay"></div>
+        <a href="#" class="product__link">
+          <div class="product__overlay"></div>          
+        </a>
         {% capture discount %}
           {{ product.compare_at_price_max | minus:product.price | times:100 | divided_by:product.compare_at_price_max }}
         {% endcapture %}
