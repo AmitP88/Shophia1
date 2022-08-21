@@ -41,10 +41,15 @@
       </div>
 
       <div class="quantity">
-        <input type="button" onclick="decrementValue()" value="-" /> 
-        <label for="Quantity">Quantity</label>
-        <input type="number" id="Quantity" name="quantity" value="1" min="1">
-        <input type="button" onclick="incrementValue()" value="+" />       
+        <div class="quantity__label">
+          <label for="Quantity">Quantity</label>          
+        </div>
+
+        <div class="quantity__counter">
+          <input type="button" onclick="decrementValue()" value="-" />          
+          <input type="number" id="Quantity" name="quantity" value="1" min="1">
+          <input type="button" onclick="incrementValue()" value="+" />
+        </div>
       </div>
 
       <button type="submit" name="add" id="AddToCart">Add to cart</button>
@@ -64,7 +69,7 @@
   function decrementValue() {
     let value = parseInt(document.getElementById('Quantity').value, 10);
     value = isNaN(value) ? 0 : value;
-    if (value >= 1) {
+    if (value >= 2) {
       value--;
     }
     document.getElementById('Quantity').value = value;
