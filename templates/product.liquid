@@ -18,7 +18,12 @@
   <div class="product__page-right">
     <div class="title">
       <h1>{{ product.title }}</h1>
-      {{ current_variant.price | money }}
+      <div class="product__price">
+        <div class="price">{{ current_variant.price | money }}</div>
+        {% if product.compare_at_price %}
+          <div class="discount">{{ product.compare_at_price_max | money }}</div>
+        {% endif %}
+      </div>
     </div>
 
     <hr>
