@@ -1197,7 +1197,105 @@ footer > .small__footer > .small__footer-content > .content__right > button.scro
 
 /* ===================== Product Template ========================= */
 .product__page {
-  margin: 0 6rem;
+  margin: 2rem auto;
+  width: 75%;
+}
+
+.product__page > .product__page-left > .product__page-image > img {
+  width: 100%;
+}
+
+.product__page > .product__page-left > .product__page-thumbnails {
+  margin: 1rem auto;
+}
+
+.product__page > .product__page-left > .product__page-thumbnails > a > img {
+  width: 25%;
+}
+
+.product__page > .product__page-right > .title {
+  margin-bottom: 1rem;
+}
+
+.product__page > .product__page-right > .title > h1 {
+  font-family: "OpenSans";
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.product__page > .product__page-right > .title > .money {
+  font-family: "OpenSans";
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.product__page > .product__page-right > hr {
+  height: 1px;
+  margin-bottom: 1rem;
+  background-color: #d8be8f;
+}
+
+.product__page > .product__page-right > form > .quantity > .quantity__counter {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 1rem;
+  width: 90px;
+}
+
+.product__page > .product__page-right > form > .quantity > .quantity__label > label {
+  font-family: "OpenSans";
+  text-transform: uppercase;
+  font-size: 0.65rem;
+  letter-spacing: 0.5px;
+}
+
+.product__page > .product__page-right > form > .quantity > .quantity__counter > input[type="button"] {
+  width: 25px;
+  height: 25px;
+  border: 1px solid black;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.product__page > .product__page-right > form > .quantity > .quantity__counter > input[type="number"] {
+  width: 25px;
+  height: 21px;
+  border: 1px solid black;
+  background-color: transparent;
+  margin-top: 0.25rem;    
+  text-align: center;
+  -moz-appearance: textfield;    
+}
+
+/* Chrome, Safari, Edge, Opera */
+.product__page > .product__page-right > form > .quantity > .quantity__counter > input[type="number"]::-webkit-outer-spin-button,
+.product__page > .product__page-right > form > .quantity > .quantity__counter > input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.product__page > .product__page-right > form > .product__description > p {
+  line-height: 1.25rem;
+  font-family: OpenSans;
+  font-size: .85rem;
+  max-width: 300px;
+  margin: 2rem 0;
+}
+
+.product__page > .product__page-right > form > button[type="submit"] {
+  border: 1px solid black;
+  color: white;
+  background-color: black;
+  font-family: "OpenSans";
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 0.65rem 2rem;
+  width: 100%;
+  max-width: 300px;
+  margin-top: 1rem;
 }
 
 /* ======================== Media Queries  ========================= */
@@ -1732,6 +1830,7 @@ footer > .small__footer > .small__footer-content > .content__right > button.scro
   .product__page {
     display: flex;
     justify-content: space-around;
+    margin: 0 6rem;
   }
 
   .product__page > .product__page-left {
@@ -1739,40 +1838,9 @@ footer > .small__footer > .small__footer-content > .content__right > button.scro
     margin-left: 0;
   }
 
-  .product__page > .product__page-left > .product__page-thumbnails {
-    margin-top: 1rem;
-  }
-
-  .product__page > .product__page-left > .product__page-thumbnails > a > img {
-    width: 25%;
-  }
-
   .product__page > .product__page-right {
     margin: 3rem 1.5rem;
     margin-right: 0;
-  }
-
-  .product__page > .product__page-right > .title {
-    margin-bottom: 1rem;
-  }
-
-  .product__page > .product__page-right > .title > h1 {
-    font-family: "OpenSans";
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-  }
-
-  .product__page > .product__page-right > .title > .money {
-    font-family: "OpenSans";
-    font-size: 1.25rem;
-    font-weight: bold;
-  }
-
-  .product__page > .product__page-right > hr {
-    height: 1px;
-    margin-bottom: 1rem;
-    background-color: #d8be8f;
   }
 
   .product__page > .product__page-right > form > .variant {
@@ -1782,52 +1850,6 @@ footer > .small__footer > .small__footer-content > .content__right > button.scro
   .product__page > .product__page-right > form > .quantity {
     margin-bottom: 1rem;
     width: fit-content;
-  }
-
-  .product__page > .product__page-right > form > .quantity > .quantity__counter {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    width: 90px;
-  }
-
-  .product__page > .product__page-right > form > .quantity > .quantity__label > label {
-    font-family: "OpenSans";
-    text-transform: uppercase;
-    font-size: 0.65rem;
-    letter-spacing: 0.5px;
-  }
-
-  .product__page > .product__page-right > form > .quantity > .quantity__counter > input[type="button"] {
-    width: 25px;
-    height: 25px;
-    border: 1px solid black;
-    background-color: transparent;
-    cursor: pointer;
-  }
-
-  .product__page > .product__page-right > form > .quantity > .quantity__counter > input[type="number"] {
-    width: 25px;
-    height: 21px;
-    border: 1px solid black;
-    background-color: transparent;
-    margin-top: 0.25rem;    
-    text-align: center;
-    -moz-appearance: textfield;    
-  }
-
-  /* Chrome, Safari, Edge, Opera */
-  .product__page > .product__page-right > form > .quantity > .quantity__counter > input[type="number"]::-webkit-outer-spin-button,
-  .product__page > .product__page-right > form > .quantity > .quantity__counter > input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
-
-  .product__page > .product__page-right > form > .product__description > p {
-    line-height: 1.25rem;
-    font-family: "OpenSans";
-    font-size: 0.75rem;
-    max-width: 300px;
   }
 
   .product__page > .product__page-right > form > button[type="submit"] {
