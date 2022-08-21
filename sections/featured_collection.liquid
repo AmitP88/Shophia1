@@ -13,7 +13,7 @@
     {% for product in collections[featured_collection].products %}
       <div class="product">
         {{ product.featured_image | img_url: 'master' | img_tag }}
-        <a href="#" class="product__link">
+        <a href="{{ product.url }}" class="product__link">
           <div class="product__overlay"></div>          
         </a>
         {% capture discount %}
