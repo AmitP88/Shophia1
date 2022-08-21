@@ -31,20 +31,24 @@
     <form action="/cart/add" method="post" enctype="multipart/form-data" id="AddToCartForm">
 
       <div class="size__quantity">
-        <div class="variant__sizes">
-          <div class="variant__sizes-label">
-            <label for="Size">Size</label>
-          </div>
-          <select name="id" id="productSelect">
-            {% for variant in product.variants %}
-              {% if variant.available %}
-                <option value="{{ variant.id }}">{{ variant.title }}</option>
-              {% else %}
-                <option disabled="disabled">{{ variant.title }} - sold out</option>
-              {% endif %}
-            {% endfor %}
-          </select>
-        </div>
+        {% for product_option in product.options_with_values %}
+          {% if product_option.name == "Size" %}
+            <div class="variant__sizes">
+              <div class="variant__sizes-label">
+                <label for="Size">Size</label>
+              </div>
+              <select name="id" id="productSelect">
+                {% for variant in product.variants %}
+                  {% if variant.available %}
+                    <option value="{{ variant.id }}">{{ variant.title }}</option>
+                  {% else %}
+                    <option disabled="disabled">{{ variant.title }} - sold out</option>
+                  {% endif %}
+                {% endfor %}
+              </select>
+            </div>
+          {% endif %}
+        {% endfor %}
 
         <div class="quantity">
           <div class="quantity__label">
