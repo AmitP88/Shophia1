@@ -52,9 +52,14 @@
         </div>
       </div>
 
+      {% if product.description %}
+        <div class="product__description">
+          <p>{{ product.description }}</p>          
+        </div>
+      {% endif %}
+
       <button type="submit" name="add" id="AddToCart">Add to cart</button>
-    </form>
-    <div>{{ product.description }}</div>    
+    </form>    
   </div>
 </div>
 
