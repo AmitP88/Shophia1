@@ -1803,6 +1803,7 @@ footer > .small__footer > .small__footer-content > .content__right > button.scro
     height: 25px;
     border: 1px solid black;
     background-color: transparent;
+    cursor: pointer;
   }
 
   .product__page > .product__page-right > form > .quantity > .quantity__counter > input[type="number"] {
@@ -1812,6 +1813,28 @@ footer > .small__footer > .small__footer-content > .content__right > button.scro
     background-color: transparent;
     margin-top: 0.25rem;    
     text-align: center;
+    -moz-appearance: textfield;    
+  }
+
+  /* Chrome, Safari, Edge, Opera */
+  .product__page > .product__page-right > form > .quantity > .quantity__counter > input[type="number"]::-webkit-outer-spin-button,
+  .product__page > .product__page-right > form > .quantity > .quantity__counter > input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  .product__page > .product__page-right > form > button[type="submit"] {
+    border: 1px solid black;
+    font-family: "OpenSans";
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: black;
+    background-color: white;
+    padding: 0.65rem 2rem;
+    width: 100%;
+    margin-top: 1rem;
+    cursor: pointer;
   }
 
 }
