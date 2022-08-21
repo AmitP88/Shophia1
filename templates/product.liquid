@@ -29,35 +29,36 @@
     <hr>
 
     <form action="/cart/add" method="post" enctype="multipart/form-data" id="AddToCartForm">
-      <div class="variant">
-        {% if product.variants.length > 1 %}
+
+      <div class="size__quantity">
+        <div class="variant__sizes">
+          <div class="variant__sizes-label">
+            <label for="Size">Size</label>
+          </div>
           <select name="id" id="productSelect">
             {% for variant in product.variants %}
               {% if variant.available %}
-                <option value="{{ variant.id }}">
-                  {{ variant.title }} - {{ variant.price | money_with_currency }}
-                </option>
+                <option value="{{ variant.id }}">{{ variant.title }}</option>
               {% else %}
-                <option disabled="disabled">
-                  {{ variant.title }} - sold out
-                </option>
+                <option disabled="disabled">{{ variant.title }} - sold out</option>
               {% endif %}
             {% endfor %}
           </select>
-        {% endif %}
-      </div>
-
-      <div class="quantity">
-        <div class="quantity__label">
-          <label for="Quantity">Quantity</label>          
         </div>
 
-        <div class="quantity__counter">
-          <input type="button" onclick="decrementValue()" value="-" />          
-          <input type="number" id="Quantity" name="quantity" value="1" min="1">
-          <input type="button" onclick="incrementValue()" value="+" />
-        </div>
+        <div class="quantity">
+          <div class="quantity__label">
+            <label for="Quantity">Quantity</label>          
+          </div>
+
+          <div class="quantity__counter">
+            <input type="button" onclick="decrementValue()" value="-" />          
+            <input type="number" id="Quantity" name="quantity" value="1" min="1">
+            <input type="button" onclick="incrementValue()" value="+" />
+          </div>
+        </div>        
       </div>
+
 
       {% if product.description %}
         <div class="product__description">
