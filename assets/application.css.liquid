@@ -1198,11 +1198,13 @@ footer > .small__footer > .small__footer-content > .content__right > button.scro
 /* ===================== Product Template ========================= */
 .product__page {
   margin: 2rem auto;
-  width: 75%;
+  width: 80%;
 }
 
 .product__page > .product__page-left > .product__page-image > img {
   width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .product__page > .product__page-left > .product__page-thumbnails {
@@ -1717,6 +1719,54 @@ footer > .small__footer > .small__footer-content > .content__right > button.scro
   footer > .small__footer {
     padding: 3rem 1rem;
   }
+
+  .product__page {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+  }
+
+  .product__page > .product__page-left {
+    margin: 3rem 1.5rem;
+    margin-left: 0;
+  }
+
+  .product__page > .product__page-right {
+    margin: 3rem 1.5rem;
+    margin-right: 0;
+  }
+
+  .product__page > .product__page-right > form > .variant {
+    margin-bottom: 1rem;
+  }
+
+  .product__page > .product__page-right > form > .quantity {
+    margin-bottom: 1rem;
+    width: fit-content;
+  }
+
+  .product__page > .product__page-right > form > button[type="submit"] {
+    border: 1px solid black;
+    font-family: "OpenSans";
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: black;
+    background-color: white;
+    padding: 0.65rem 2rem;
+    width: 100%;
+    max-width: 300px;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .product__page > .product__page-right > form > button[type="submit"]:hover {
+    border: 1px solid black;
+    color: white;
+    background-color: black;
+  }
+
 }
 
 @media only screen and (min-width: 768px) {
@@ -1826,54 +1876,6 @@ footer > .small__footer > .small__footer-content > .content__right > button.scro
   footer > .small__footer {
     padding: 3rem 2rem;
   }
-
-  .product__page {
-    display: flex;
-    justify-content: space-around;
-    margin: 0 6rem;
-  }
-
-  .product__page > .product__page-left {
-    margin: 3rem 1.5rem;
-    margin-left: 0;
-  }
-
-  .product__page > .product__page-right {
-    margin: 3rem 1.5rem;
-    margin-right: 0;
-  }
-
-  .product__page > .product__page-right > form > .variant {
-    margin-bottom: 1rem;
-  }
-
-  .product__page > .product__page-right > form > .quantity {
-    margin-bottom: 1rem;
-    width: fit-content;
-  }
-
-  .product__page > .product__page-right > form > button[type="submit"] {
-    border: 1px solid black;
-    font-family: "OpenSans";
-    font-size: 1rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: black;
-    background-color: white;
-    padding: 0.65rem 2rem;
-    width: 100%;
-    max-width: 300px;
-    margin-top: 1rem;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-
-  .product__page > .product__page-right > form > button[type="submit"]:hover {
-    border: 1px solid black;
-    color: white;
-    background-color: black;
-  }
-
 }
 
 @media only screen and (min-width: 900px) {
