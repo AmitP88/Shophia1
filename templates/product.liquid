@@ -30,12 +30,26 @@
 
     <form action="/cart/add" method="post" enctype="multipart/form-data" id="AddToCartForm">
 
+      <div class="color__swatches">
+        {% for option in product.options_with_values %}
+          {% if option.name == "Color" %}
+            <div class="swatches__label">
+              <label for="{{ option.name }}">{{ option.name }} : </label>
+              <div class="swatches__options">
+                
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+
+      </div>
+
       <div class="size__quantity">
         {% for option in product.options_with_values %}
           {% if option.name == "Size" %}
             <div class="variant__sizes">
               <div class="variant__sizes-label">
-                <label for="{{ option.name }}">{{ option.name }}</label>
+                <label for="{{ option.name }}">{{ option.name }} </label>
               </div>
               <select name="id" id="productSelect">
                 {% for value in option.values %}
