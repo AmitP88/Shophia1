@@ -33,10 +33,20 @@
       <div class="color__swatches">
         {% for option in product.options_with_values %}
           {% if option.name == "Color" %}
-            <div class="swatches__label">
+            <div class="swatches">
               <label for="{{ option.name }}">{{ option.name }} : </label>
               <div class="swatches__options">
-                
+                {% for value in option.values %}
+                  <option 
+                    value="{{ value | escape }}"
+                    {% if option.selected_value == value %}
+                      selected="selected"
+                    {% endif %}
+                    style="background-color:{{ value | escape }}"
+                  >
+                    {{ value }}
+                  </option>
+                {% endfor %}
               </div>
             </div>
           {% endif %}
@@ -53,7 +63,12 @@
               </div>
               <select name="id" id="productSelect">
                 {% for value in option.values %}
-                  <option value="{{ value | escape }}" {% if option.selected_value == value %}selected="selected"{% endif %}>
+                  <option
+                    value="{{ value | escape }}"
+                    {% if option.selected_value == value %}
+                      selected="selected"
+                    {% endif %}
+                  >
                     {{ value }}
                   </option>
                 {% endfor %}
