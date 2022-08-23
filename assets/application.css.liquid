@@ -1197,8 +1197,8 @@ footer > .small__footer > .small__footer-content > .content__right > button.scro
 
 /* ===================== Product Template ========================= */
 .product__page {
-  margin: 2rem auto;
-  width: 80%;
+  margin: 2rem;
+  width: fit-content;
 }
 
 .product__page > .product__page-left {
@@ -1265,6 +1265,7 @@ footer > .small__footer > .small__footer-content > .content__right > button.scro
 .product__page > .product__page-right > form > .size__quantity {
   display: flex;
   justify-content: space-between;
+  max-width: fit-content;
 }
 
 .product__page > .product__page-right > form > .size__quantity > .variant__sizes > select {
@@ -1399,6 +1400,11 @@ footer > .small__footer > .small__footer-content > .content__right > button.scro
   footer > .large__footer > .large__footer-right > .subscribe > .subscribe-email > input {
     font-size: small;
   }
+
+  .product__page > .product__page-right > form > .size__quantity > .variant__sizes {
+    margin-right: 1rem;
+  }
+
 }
 
 @media only screen and (min-width: 425px) {
@@ -1771,7 +1777,6 @@ footer > .small__footer > .small__footer-content > .content__right > button.scro
   .product__page {
     display: flex;
     justify-content: space-around;
-    margin: 0 auto;
   }
 
   .product__page > .product__page-left {
@@ -1928,6 +1933,11 @@ footer > .small__footer > .small__footer-content > .content__right > button.scro
   footer > .small__footer {
     padding: 3rem 2rem;
   }
+
+  .product__page {
+    margin: 0 auto;
+  }
+
 }
 
 @media only screen and (min-width: 900px) {
