@@ -29,32 +29,29 @@
     <hr>
 
     <form action="/cart/add" method="post" enctype="multipart/form-data" id="AddToCartForm">
-
-      <div class="color__swatches">
+      <div class="size__quantity">
         {% for option in product.options_with_values %}
           {% if option.name == "Color" %}
-            <div class="swatches">
-              <label for="{{ option.name }}">{{ option.name }} : </label>
-              <div class="swatches__options">
+            <div class="variant__sizes">
+              <div class="variant__sizes-label">
+                <label for="{{ option.name }}">{{ option.name }} </label>
+              </div>
+              <select name="id" id="productSelect">
                 {% for value in option.values %}
-                  <option 
+                  <option
                     value="{{ value | escape }}"
                     {% if option.selected_value == value %}
                       selected="selected"
                     {% endif %}
-                    style="background-color:{{ value | escape }}"
                   >
                     {{ value }}
                   </option>
                 {% endfor %}
-              </div>
+              </select>
             </div>
           {% endif %}
         {% endfor %}
 
-      </div>
-
-      <div class="size__quantity">
         {% for option in product.options_with_values %}
           {% if option.name == "Size" %}
             <div class="variant__sizes">
